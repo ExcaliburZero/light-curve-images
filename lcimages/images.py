@@ -1,7 +1,5 @@
 from scipy.misc import toimage
 
-import colorsys
-import math
 import numpy as np
 
 def bin_lc(times, magnitudes):
@@ -35,10 +33,6 @@ def get_deltas(times, magnitudes):
     deltas = np.column_stack((delta_times, delta_mags))
 
     return deltas
-
-def get_color(value):
-    c = value * 255
-    return [c, c, c]
 
 def bins_to_image(bins):
     bins_2d = bins.reshape(22, 24)
